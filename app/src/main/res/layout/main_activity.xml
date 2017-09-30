@@ -20,12 +20,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{handlers::onClickFriend}"
+            android:onClick="@{(view) -> handlers.onClickFriend(view, user)}"
             android:text="@{user.firstName}"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{user.lastName}"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            android:onClick="@{()-> handlers.updateUser(user)}"/>
     </LinearLayout>
 </layout>
