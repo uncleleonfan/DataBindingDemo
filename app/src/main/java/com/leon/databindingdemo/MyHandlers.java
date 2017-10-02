@@ -23,15 +23,23 @@ public class MyHandlers {
     }
 
 
-/*    public void onClickFriend(View view, User user) {
-        Log.d(TAG, "onClickFriend: ");
+/*
+    public void onClickFriend(View view, User user) {
         Toast.makeText(view.getContext(), "onClickFriend：" + user.getFirstName(), Toast.LENGTH_SHORT).show();
-    }*/
+    }
+*/
 
     public void onClickFriend(View view, User user) {
         Log.d(TAG, "onClickFriend: ");
         Toast.makeText(view.getContext(), "onClickFriend：" + user.firstName.get(), Toast.LENGTH_SHORT).show();
     }
+/*
+
+    public void updateUser(User user) {
+        user.setFirstName("Leon");
+        user.setLastName("Fan");
+    }
+*/
 
     public void updateUser(User user) {
         user.firstName.set("Leon");
